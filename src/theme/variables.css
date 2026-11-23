@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paleta Neo-Brutalista Moderna inspirada en Gumroad (WCAG AAA en todos los pares) */
+  --ion-color-primary: #000000;
+  --ion-color-primary-rgb: 0, 0, 0;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #000000;
+  --ion-color-primary-tint: #262626;
+
+  --ion-color-secondary: #ff90e8;
+  --ion-color-secondary-rgb: 255, 144, 232;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #e07fcc;
+  --ion-color-secondary-tint: #ff9bea;
+
+  --ion-color-success: #23a094;
+  --ion-color-success-rgb: 35, 160, 148;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #1f8d82;
+  --ion-color-success-tint: #39aa9f;
+
+  --ion-color-warning: #ffc900;
+  --ion-color-warning-rgb: 255, 201, 0;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0b100;
+  --ion-color-warning-tint: #ffce1a;
+
+  --ion-color-danger: #ff6b6b;
+  --ion-color-danger-rgb: 255, 107, 107;
+  --ion-color-danger-contrast: #000000;
+  --ion-color-danger-contrast-rgb: 0, 0, 0;
+  --ion-color-danger-shade: #e05e5e;
+  --ion-color-danger-tint: #ff7a7a;
+
+  --ion-background-color: #f4f4f0;
+  --ion-text-color: #000000;
+  --ion-font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* Tokens de animación táctil neo-brutalista */
+  --ease-neo: cubic-bezier(0.22, 1, 0.36, 1);
+  --recede-scale: 0.968;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  background-color: #f4f4f0;
+  color: #000000;
+}
+
+/* Personalización Shadow DOM de componentes Ionic en estilo Neo-Brutalista Gumroad */
+ion-toolbar.neo-toolbar {
+  --background: #ffffff;
+  --color: #000000;
+  --border-width: 0 0 2px 0;
+  --border-color: #000000;
+  --min-height: 58px;
+  --padding-start: 0px;
+  --padding-end: 0px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+}
+
+ion-toolbar.neo-modal-toolbar {
+  --background: #ff90e8;
+  --color: #000000;
+  --border-width: 0 0 2px 0;
+  --border-color: #000000;
+  --min-height: 58px;
+}
+
+ion-searchbar.neo-searchbar {
+  --background: #ffffff;
+  --color: #000000;
+  --placeholder-color: #525252;
+  --icon-color: #000000;
+  --clear-button-color: #000000;
+  --border-radius: 6px;
+  --box-shadow: 4px 4px 0px 0px #000000;
+  padding: 0 !important;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  transition: transform 180ms var(--ease-neo), box-shadow 180ms var(--ease-neo);
+}
+
+ion-searchbar.neo-searchbar:focus-within {
+  transform: translate(-2px, -2px);
+  --box-shadow: 6px 6px 0px 0px #ff90e8;
+}
+
+ion-segment.neo-segment {
+  --background: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px 0px #000000;
+  overflow: hidden;
+}
+
+ion-segment.neo-segment ion-segment-button {
+  --color: #000000;
+  --color-checked: #ffffff;
+  --background-checked: #000000;
+  --indicator-color: #ff90e8;
+  --indicator-height: 4px;
+  --border-radius: 0px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  min-height: 44px;
+}
+
+ion-fab-button.neo-fab {
+  --background: #ff90e8;
+  --background-hover: #ffc900;
+  --background-activated: #ffc900;
+  --color: #000000;
+  --border-radius: 12px;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: #000000;
+  --box-shadow: 4px 4px 0px 0px #000000;
+  transition: transform 180ms var(--ease-neo), box-shadow 180ms var(--ease-neo);
+}
+
+ion-fab-button.neo-fab:hover {
+  transform: translate(-3px, -3px);
+  --box-shadow: 7px 7px 0px 0px #000000;
+}
+
+ion-fab-button.neo-fab:active {
+  transform: translate(2px, 2px);
+  --box-shadow: 0px 0px 0px 0px #000000;
+}
+
+ion-button.neo-submit {
+  --background: #000000;
+  --background-hover: #ff90e8;
+  --color: #ffffff;
+  --color-hover: #000000;
+  --border-radius: 6px;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: #000000;
+  --box-shadow: 4px 4px 0px 0px #000000;
+  min-height: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  transition: transform 180ms var(--ease-neo), box-shadow 180ms var(--ease-neo);
+}
+
+ion-button.neo-submit:hover {
+  transform: translate(-2px, -2px);
+  --box-shadow: 6px 6px 0px 0px #000000;
+}
+
+ion-chip.neo-chip-pending {
+  --background: #ffc900;
+  --color: #000000;
+}
+
+ion-chip.neo-chip-resolved {
+  --background: #90f0d6;
+  --color: #000000;
+}
+
+/* Efecto Page Recede al abrir el modal */
+.brutal-stage {
+  transform-origin: center top;
+  transition: transform 380ms var(--ease-neo), filter 300ms var(--ease-neo);
+}
+
+.brutal-stage.is-receded {
+  transform: scale(var(--recede-scale));
+  filter: brightness(0.84);
+}
+
+/* Contadores CSS puros para indexar el listado (01, 02, 03...) */
+.brutal-incident-list {
+  counter-reset: incident-index;
+}
+
+.brutal-incident-row {
+  counter-increment: incident-index;
+}
+
+.brutal-incident-index::before {
+  content: counter(incident-index, decimal-leading-zero);
+}
+
+/* Animación de entrada neo-brutalista tipo pegatina elástica */
+@keyframes neo-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-neo-pop {
+  animation: neo-pop-in 420ms var(--ease-neo) both;
+}
+
+/* Respeto a accesibilidad de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .animate-neo-pop {
+    animation: none;
+  }
+  .brutal-stage,
+  ion-searchbar.neo-searchbar,
+  ion-fab-button.neo-fab,
+  ion-button.neo-submit {
+    transition: none;
+  }
+  .brutal-stage.is-receded {
+    transform: none;
+  }
+}
